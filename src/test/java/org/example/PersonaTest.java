@@ -31,7 +31,7 @@ class PersonaTest {
             p.setNacimiento(pruebas);
             assertEquals(-1, p.getEdad(), "Error por una edad con la que no ha nacido");
         }catch (Exception e){
-            System.out.println("El código ha dado error y no -1");
+            fail("El código ha dado error y no -1");
         }
 
         //Valor null
@@ -40,7 +40,7 @@ class PersonaTest {
             p.setNacimiento(pruebas);
             assertEquals(0, p.getEdad(), "Error por null");
         }catch (Exception e){
-            System.out.println("El código ha dado error y no ha devueleto null");
+            fail("El código ha dado error y no ha devueleto null");
         }
     }
 }
