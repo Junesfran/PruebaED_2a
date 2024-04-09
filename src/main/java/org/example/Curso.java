@@ -8,7 +8,7 @@ import java.util.TreeSet;
 
 /**
  *
- * @author ProfDiurno
+ * @author Néstor Franco, ver. 1.0.0.0.0.0.12
  */
 public class Curso {
 
@@ -19,11 +19,21 @@ public class Curso {
         return nombre;
     }
 
+    /**
+     *
+     * Recibe una String con el nombre del curso.
+     * @param nombre
+     */
     public Curso(String nombre) {
         this.nombre = nombre;
         listaAlumnos = new TreeSet<>();
     }
 
+    /**
+     *
+     * El toString de la clase curso devolverá los alumnos del curso en cuestión de manera ordenada
+     * @return String ordenado
+     */
     @Override
     public String toString() {
         String s = "--------------------" + nombre + "-----------------\n";
@@ -35,6 +45,12 @@ public class Curso {
         return s;
     }
 
+    //testear
+    /**
+     *
+     *Método que permite añadir nuevos alumnos al curso. Recibe un parametro del tipo Persona.
+     * @param p
+     */
     public void aniadirAlumno(Persona p) {
         listaAlumnos.add(p);
     }
